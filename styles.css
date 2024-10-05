@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    background: linear-gradient(180deg, #100311, #100315, #160426, #240332, #30053B, #360440);
+    background-attachment: fixed;
+    background-size: cover;
+    color: #fff;
+    overflow-x: hidden; /* Evita rolagem horizontal */
+    scrollbar-width: thin; /* Define a largura da barra de rolagem em navegadores como Firefox */
+    scrollbar-color: #f39c12 #1e1e2f; /* Cor da barra e do fundo da área de rolagem */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    position: relative;
+    height: 70px;
+}
+
+.logo {
+    height: 50px;
+}
+
+h1{
+    font-family: "Metal Mania", sans-serif;
+    font-size: 40px;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 3;
+    position: relative;
+}
+
+.bar {
+    background-color: white;
+    height: 3px;
+    width: 30px;
+    margin: 5px 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Transformações para o menu hambúrguer ao abrir */
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+/* Desfoque o fundo do site quando o menu está aberto */
+body.menu-open {
+    overflow: hidden;
+}
+
+body.menu-open::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Estilos do menu */
+#nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9); /* Deixa o fundo mais opaco para visibilidade dos links */
+    padding: 20px;
+    width: 250px;
+    height: 100vh;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+    z-index: 2; /* Garante que o menu esteja acima do fundo desfocado */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto;
+}
+
+/* Mostra o menu quando o hambúrguer está ativo */
+#nav.show {
+    transform: translateX(0);
+}
+
+#menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#menu li {
+    margin: 0;
+}
+
+#menu li a {
+    display: block;
+    padding: 15px 10px; /* Ajuste para garantir espaçamento adequado */
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Metal Mania", sans-serif;
+    font-weight: normal;
+    z-index: 3; /* Garante que os links estejam acima do fundo desfocado */
+    transition: color 0.9s ease;
+}
+
+#menu li a:hover {
+    color: #f39c12;
+}
+
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 90px); /* Ajuste conforme necessário */
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    overflow: hidden; /* Evita barras de rolagem */
+}
+footer {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente o conteúdo do footer */
+    align-items: center;     /* Alinha verticalmente o conteúdo do footer */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+footer p {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0; /* Remove a margem padrão */
+    text-align: center; /* Centraliza o texto dentro do footer */
+}
+/* Personalização para navegadores baseados em WebKit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 10px; /* Largura da barra de rolagem vertical */
+}
+
+::-webkit-scrollbar-track {
+    background: #1e1e2f; /* Cor do fundo da barra de rolagem */
+    border-radius: 10px; /* Arredonda as bordas da área da barra */
+}
+
+
+::-webkit-scrollbar-thumb {
+
+    background-color: #f39c12; /* Cor da barra de rolagem */
+    border-radius: 10px; /* Arredonda a barra de rolagem */
+    border: 3px solid #1e1e2f; /* Espaço entre a barra e a área de rolagem */
+    
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #fefc9b; /* Cor da barra ao passar o mouse */
+}
+
+
+
+
+/* Configurações para telas menores*/
+/* Adiciona o menu hambúrguer em todas as telas */
+@media (min-width: 0px) {
+    .hamburger {
+        display: flex;           /* Exibe o menu hambúrguer em todas as telas */
+    }
+    
+    nav {
+        display: none;           /* Oculta o nav em telas pequenas por padrão */
+    }
+}
+@media (max-width: 600px) {
+    h1{
+        font-size: 1.2em;
+    }
+}
+/* Ocultar a barra de rolagem em dispositivos móveis */
+@media (max-width: 1100px) { /* Limite para telas menores que desktop */
+    ::-webkit-scrollbar {
+        display: none; /* Oculta a barra de rolagem */
+    }
+}

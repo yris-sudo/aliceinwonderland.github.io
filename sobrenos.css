@@ -1,0 +1,145 @@
+/* sobrenos.css */
+
+/* Reseta margens e preenchimentos e define o box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.marcellus-sc-regular {
+    font-family: "Marcellus SC", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+::-webkit-scrollbar{
+    width: 0px;
+}
+body {
+    color: #fff;
+    padding: 20px;
+}
+
+main {
+    max-width: 800px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Metal Mania', sans-serif;
+    font-size: 2.5em; /* Ajuste o tamanho do texto */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 20px; /* Espaçamento entre parágrafos */
+    font-size: 1.2em; /* Ajuste o tamanho do texto */
+    font-family: "Marcellus SC", serif;
+
+}
+/* Estilos para a div com os ícones sociais */
+.socialmedia {
+    display: flex;
+    justify-content: center; /* Centraliza os ícones horizontalmente */
+    gap: 20px; /* Espaçamento entre os ícones */
+    margin-top: 30px; /* Espaçamento superior da seção */
+}
+
+.socialmedia a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+.socialmedia i {
+    font-size: 30px; /* Tamanho dos ícones */
+    color: #fff; /* Cor dos ícones */
+    transition: color 0.9s ease; /* Transição suave para a mudança de cor */
+    
+}
+
+.socialmedia a:hover i {
+    color: #f39c12; /* Cor dos ícones ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o tamanho do ícone em 10% */
+}
+/* Estilo para a seta no canto superior esquerdo */
+.back-to-home {
+    position: fixed;
+    top: 20px; /* Ajusta a distância do topo */
+    left: 20px; /* Ajusta a distância da borda esquerda */
+    font-size: 24px;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.4s ease, transform 0.3s ease;
+}
+
+.back-to-home i {
+    transition: color 0.4s ease, transform 0.3s ease; /* Transição suave para a seta */
+}
+
+.back-to-home:hover i {
+    color: #f39c12; /* Muda a cor da seta ao passar o mouse */
+    transform: scale(1.1); /* Aumenta a seta em 10% ao passar o mouse */
+}
+
+.back-to-home:active i {
+    color: #e67e22; /* Muda a cor quando o usuário clica */
+}
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em; /* Reduz o tamanho do texto em telas menores */
+    }
+
+    p {
+        font-size: 1em; /* Ajusta o tamanho do texto em telas menores */
+    }
+
+    main {
+        padding: 10px;
+    }
+    .socialmedia {
+       
+        gap: 10px; /* Espaçamento entre os ícones reduzido */
+    }
+
+    .socialmedia i {
+        font-size: 20px; /* Tamanho dos ícones reduzido em telas menores */
+    }
+    .back-to-home {
+        font-size: 20px; /* Reduz o tamanho da seta em telas menores */
+        top: 15px; /* Ajusta a posição para telas menores */
+        left: 15px; /* Ajusta a posição para telas menores */
+    }
+}
+
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em; /* Reduz ainda mais o tamanho do texto em telas muito pequenas */
+    }
+
+    p {
+        font-size: 0.9em; /* Ajusta o tamanho do texto para telas muito pequenas */
+    }
+
+    main {
+        padding: 5px;
+    }
+    .socialmedia {
+        gap: 8px; /* Espaçamento ainda mais reduzido em telas muito pequenas */
+    }
+
+    .socialmedia i {
+        font-size: 18px; /* Tamanho dos ícones ainda menor em telas muito pequenas */
+    }
+    .back-to-home {
+        font-size: 18px; /* Reduz o tamanho da seta em telas muito pequenas */
+        top: 10px; /* Ajusta a posição para telas muito pequenas */
+        left: 10px; /* Ajusta a posição para telas muito pequenas */
+    }
+}

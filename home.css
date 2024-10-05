@@ -1,0 +1,178 @@
+body {
+    margin: 0;
+    padding: 20px;
+    color: #fff;
+    overflow-x: hidden; /* Impede a rolagem horizontal */
+    overflow-y: auto; /* Permite a rolagem vertical */
+    align-items: center;
+    height: 100%; /* Ajusta a altura para o conteúdo rolar corretamente */
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente */
+}
+#contensora {
+    display: flex;
+    flex-direction: row ;
+    width: 1500px;
+}
+img.element-cat1{
+    flex: 30%;
+    margin-left: 90px;
+}
+.quiz-info{
+    flex: 70%;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+button, h1{
+    font-family: "Metal Mania",sans sans-serif;
+    font-size: 40px;
+}
+h3{
+    font-family: "Metal Mania",sans sans-serif;
+}
+button {
+    text-align: center;
+    background-image: linear-gradient( 90deg, #C87DEB,#8987C1,#52BFBF);
+    color:black;
+    border: none;
+    padding: 20px 30px;
+    border-radius: 50%;
+    margin-left: 30%;
+    cursor: pointer;
+}
+.propaganda-content{
+    margin-top: 1%;
+    background-color: #fff;
+    width: 1500px;
+    height: 200px;
+}
+.propaganda-content img:hover{
+    opacity: 0.5;
+}
+.propaganda-content a img {
+    margin-left: 10%;
+}
+.dois, .tres{
+    display: none;
+    margin-left: 10%;
+}
+
+/* Media Queries para dispositivos menores */
+@media (max-width: 1200px) {
+    #contensora {
+        width: 100%; /* Garante que o contêiner use toda a largura disponível em telas menores */
+        flex-direction: column; /* Alinha os itens verticalmente em telas menores */
+        align-items: center; /* Centraliza os itens horizontalmente */
+    }
+
+    img.element-cat1 {
+        width: 70%; /* Ajusta a largura da imagem para caber em telas menores */
+        max-width: 70%; /* Limita a largura máxima */
+        margin-bottom: 20px; /* Adiciona espaço abaixo da imagem */
+    }
+
+    .quiz-info {
+        width: 80%; /* Garante que a div use a maior parte da largura disponível */
+        margin-top: 20px; /* Ajusta o espaçamento acima da div */
+        margin-left: 0; /* Remove o espaçamento à esquerda */
+        text-align: center; /* Centraliza o texto dentro da div */
+    }
+
+    button {
+        margin-left: 0; /* Remove o espaçamento à esquerda */
+        font-size: 30px; /* Ajusta o tamanho da fonte do botão */
+        padding: 30px 25px; /* Ajusta o preenchimento do botão */
+    }
+    .um{
+        display: none;
+    }
+    .dois{
+        display: block;
+
+    }
+}
+
+@media (max-width: 768px) {
+    #contensora {
+        flex-direction: column; /* Alinha os itens verticalmente em telas ainda menores */
+        align-items: center; /* Centraliza os itens horizontalmente */
+        width: 100%; /* Garante que o contêiner use toda a largura disponível */
+    }
+
+    img.element-cat1 {
+        width: 90%; /* Ajusta a largura da imagem para caber em telas ainda menores */
+        max-width: 90%; /* Limita a largura máxima */
+        margin-bottom: 20px; /* Adiciona espaço abaixo da imagem */
+    }
+
+    .quiz-info {
+        width: 100%; /* Garante que a div use toda a largura disponível */
+        margin-top: 20px; /* Ajusta o espaçamento acima da div */
+        margin-left: 0; /* Remove o espaçamento à esquerda */
+        text-align: center; /* Centraliza o texto dentro da div */
+    }
+
+    button {
+        margin-left: 0; /* Remove o espaçamento à esquerda */
+        font-size: 25px; /* Ajusta o tamanho da fonte do botão */
+        padding: 10px 20px; /* Ajusta o preenchimento do botão */
+    }
+
+    .propaganda-content {
+        width: 100%; /* Garante que a propaganda use toda a largura disponível */
+        height: auto; /* Ajusta a altura conforme necessário */
+        padding: 20px; /* Adiciona algum preenchimento ao redor da propaganda */
+    }
+    .um{
+        display: none;
+    }
+    .dois{
+        display: none;
+    }
+    .tres{
+        display: block;
+    }
+   
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px; /* Ajusta o preenchimento do corpo */
+    }
+
+    img.element-cat1 {
+        width: 100%; /* Ajusta a largura da imagem para caber em telas muito pequenas */
+        max-width: 100%; /* Limita a largura máxima */
+        margin-bottom: 10px; /* Adiciona espaço abaixo da imagem */
+        margin-left: 0;
+    }
+
+    .quiz-info {
+        width: 100%; /* Garante que a div use toda a largura disponível */
+        margin-top: 10px; /* Ajusta o espaçamento acima da div */
+        margin-left: 0; /* Remove o espaçamento à esquerda */
+        text-align: center; /* Centraliza o texto dentro da div */
+    }
+
+    button {
+        font-size: 20px; /* Ajusta o tamanho da fonte do botão */
+        padding: 10px 15px; /* Ajusta o preenchimento do botão */
+    }
+
+    .propaganda-content {
+        width: 100%; /* Garante que a propaganda use toda a largura disponível */
+        height: auto; /* Ajusta a altura conforme necessário */
+        padding: 10px; /* Adiciona algum preenchimento ao redor da propaganda */
+    }
+    .um{
+        display: none;
+    }
+    .dois{
+        display: none;
+    }
+    .tres{
+        display: block;
+
+    }
+   
+}
