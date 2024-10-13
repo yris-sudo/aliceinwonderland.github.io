@@ -1,0 +1,204 @@
+body {
+    margin: 0;
+    padding: 20px;
+    color: #fff;
+    overflow-x: hidden; 
+    overflow-y: auto; 
+    align-items: center;
+    height: 100%; 
+    display: flex;
+    flex-direction: column; 
+}
+.contensora {
+    display: flex;
+    flex-direction: row;
+    width: 1500px;
+}
+img.element-cat1{
+    flex: 30%;
+    margin-left: 90px;
+}
+.quiz-info{
+    flex: 70%;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+button, h1{
+    font-family: "Metal Mania",sans sans-serif;
+    font-size: 40px;
+}
+h2{
+    font-family: "Metal Mania",sans sans-serif;
+}
+button {
+    text-align: center;
+    background-image: linear-gradient( 90deg, #C87DEB,#8987C1,#52BFBF);
+    color:black;
+    border: none;
+    padding: 20px 30px;
+    border-radius: 50%;
+    margin-left: 30%;
+    cursor: pointer;
+}
+.propaganda-content{
+    margin-top: 1%;
+    background-color: #fff;
+    width: 1500px;
+    height: 200px;
+   
+}
+.propaganda-content img:hover{
+    opacity: 0.5;
+}
+.propaganda-content a img {
+    margin-left: 10%;
+}
+
+.dois, .tres{
+    display: none;
+    margin-left: 15%;
+}
+.socialmedia {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; /* Espaçamento entre os ícones */
+    margin-top: 25px;
+}
+
+.socialmedia a {
+    text-decoration: none; 
+}
+
+.socialmedia i {
+    font-size: 30px; 
+    color: #fff;
+    transition: color 0.9s ease;
+    
+}
+
+.socialmedia a:hover i {
+    color: #f39c12; 
+    transform: scale(1.1); 
+}
+
+
+@media (max-width: 1200px) {
+    .contensora {
+        width: 100%; 
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    img.element-cat1 {
+        width: 70%;
+        max-width: 70%;
+        margin-bottom: 20px; 
+    }
+
+    .quiz-info {
+        width: 80%; 
+        margin-top: 20px;
+        margin-left: 0; 
+        text-align: center; 
+    }
+
+    button {
+        margin-left: 0; 
+        font-size: 30px; 
+        padding: 30px 25px; 
+    }
+    .um{
+        display: none;
+    }
+    .dois{
+        display: block;
+
+    }
+}
+
+@media (max-width: 768px) {
+    .contensora {
+        flex-direction: column; 
+        align-items: center; 
+        width: 100%; 
+    }
+
+    img.element-cat1 {
+        width: 90%; 
+        max-width: 90%; 
+        margin-bottom: 20px; 
+    }
+
+    .quiz-info {
+        width: 100%; 
+        margin-top: 20px; 
+        margin-left: 0; 
+        text-align: center; 
+    }
+
+    button {
+        margin-left: 0; 
+        font-size: 25px; 
+        padding: 10px 20px; /
+    }
+
+    .propaganda-content {
+        width: 100%;
+        height: auto; 
+        padding: 20px; 
+    }
+    .um{
+        display: none;
+    }
+    .dois{
+        display: none;
+    }
+    .tres{
+        display: block;
+    }
+   
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px; 
+    }
+
+    img.element-cat1 {
+        width: 100%; 
+        margin-bottom: 10px; 
+        margin-left: 0;
+    }
+
+    .quiz-info {
+        width: 100%; 
+        margin-top: 10px; 
+        margin-left: 0; 
+        text-align: center; 
+    }
+
+    button {
+        font-size: 20px;
+        padding: 10px 15px; 
+    }
+
+    .propaganda-content {
+        width: 100%; 
+        padding: 10px; 
+    }
+    .um{
+        display: none;
+    }
+    .dois{
+        display: none;
+    }
+    .tres{
+        display: block;
+
+    }
+    .socialmedia i {
+        font-size: 18px; 
+    }
+   
+}

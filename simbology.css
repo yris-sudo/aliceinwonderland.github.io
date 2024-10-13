@@ -1,0 +1,106 @@
+
+body {
+    font-family: 'Metal Mania', cursive;
+    margin: 0;
+    padding: 20px;
+    padding-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Estilo das caixas (divs) */
+div {
+    background: linear-gradient(180deg, #160426, #240332, #30053B, #360440);
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    flex: 1 1 calc(33.33% - 40px); /* Deixa as caixas lado a lado com 33% do espaço */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+div a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: inherit; /* Inherit para pegar a cor do texto */
+}
+
+/* Estilo do título dentro da caixa */
+h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+/* Efeitos ao passar o mouse sobre a caixa */
+div:hover {
+    transform: scale(1.01); /* Aumenta levemente a caixa */
+}
+
+div:hover h1 {
+    color: #f39c12; /* Muda a cor do texto ao passar o mouse */
+    font-size: 1.8rem; /* Aumenta o tamanho do texto ao passar o mouse */
+}
+
+/* Efeito suave nas letras ao passar o mouse */
+div:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1); /* Efeito de sombra extra */
+    z-index: -1;
+    transform: scale(1.2);
+}
+p{
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.back-arrow {
+    font-size: 24px;
+    color: #f39c12; /* Cor da seta */
+    position: fixed; /* Mantém a seta fixada na tela */
+    top: 10px; /* Distância do topo da tela (ajuste para 10px) */
+    left: 10px; /* Distância da esquerda da tela (ajuste para 10px) */
+    text-decoration: none; /* Remove sublinhado */
+    transition: color 0.3s ease; /* Efeito suave na cor */
+    z-index: 10; /* Garante que a seta fique acima de outros elementos */
+}
+iframe{
+    margin: 5%;
+}
+
+
+.back-arrow:hover {
+    color:  #e67e22; 
+    transform: scale(1.1);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    div {
+        flex: 1 1 calc(50% - 40px); /* Em telas médias, 50% de largura */
+    }
+}
+
+@media (max-width: 480px) {
+    div {
+        flex: 1 1 100%; /* Em telas pequenas, as caixas ficam uma embaixo da outra */
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    div:hover h1 {
+        font-size: 1.5rem; /* Tamanho menor no hover em telas pequenas */
+    }
+}

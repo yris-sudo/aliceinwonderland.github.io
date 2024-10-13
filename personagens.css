@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+
+    color: #fff;
+    padding-top: 20px;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-family: "Metal Mania";
+}
+
+.apresentacao {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    font-family: "Marcellus SC";
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.carousel-item {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-carousel img {
+    height: auto;
+    max-height: 560px;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.text-container {
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.carousel-item p {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-family: "Marcellus SC";
+    transition: transform 0.3s ease;
+}
+
+.carousel-item h2 {
+    font-size: 1.7rem;
+    margin-top: 10px;
+    color: #ffffff;
+    font-family: "Metal Mania";
+    transition: transform 0.3s ease;
+}
+
+.carousel-control {
+    background-color: transparent;
+    border: none;
+    color: rgba(243, 156, 18, 0.7);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-control:hover {
+    color: #f39c12;
+}
+
+.carousel-control.left {
+    left: 115px;
+}
+
+.carousel-control.right {
+    right: 115px;
+}
+
+.back-arrow {
+    font-size: 24px;
+    color: #f39c12;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    z-index: 10;
+}
+
+.back-arrow:hover {
+    color: #e67e22;
+    transform: scale(1.1);
+}
+
+.carousel-item img:hover,
+.text-container:hover p,
+.text-container:hover h2 {
+    transform: scale(1.2);
+}
+
+@media (min-width: 768px) {
+    .carousel {
+        flex-direction: row;
+    }
+
+    .carousel-item {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel-item {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .apresentacao {
+        font-size: 1.2rem;
+    }
+
+    .carousel-control.left {
+        left: 2px;
+    }
+
+    .carousel-control.right {
+        right: 2px;
+    }
+}
+
+@media (max-width: 400px) {
+    .carousel-control {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .carousel-item h2 {
+        font-size: 1rem;
+    }
+
+    .carousel-item p {
+        font-size: 0.9rem;
+    }
+}
