@@ -7,8 +7,6 @@
 body, html {
     height: 100%;
     background: linear-gradient(180deg, #100311, #100315, #160426, #240332, #30053B, #360440);
-    background-attachment: fixed;
-    background-size: cover;
     color: #fff;
     overflow-x: hidden;
     scrollbar-width: thin;
@@ -140,23 +138,6 @@ body.menu-open::before {
     color: #f39c12;
 }
 
-#language-btn {
-    background-color: #f39c12;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-family: 'Metal Mania', sans-serif;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    margin-left: 20px;
-}
-
-#language-btn:hover {
-    background-color: #e67e22;
-}
-
 main {
     display: flex;
     justify-content: center;
@@ -218,14 +199,15 @@ footer p {
     }
 }
 
+@media (max-width: 1100px) { 
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
 @media (max-width: 600px) {
     h1 {
         font-size: 1.2em;
     }
 }
 
-@media (max-width: 1100px) { 
-    ::-webkit-scrollbar {
-        display: none;
-    }
-}
