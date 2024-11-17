@@ -1,0 +1,28 @@
+.contensora {
+    display: flex;
+    flex-direction: row; /* Alinha os livros em linha no desktop */
+    flex-wrap: wrap; /* Permite que os itens quebrem em várias linhas */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    margin: 0 auto; /* Centraliza o container na página */
+}
+
+.contensora div {
+    display: flex;
+    flex-direction: column; /* Coloca título, imagem e descrição em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    margin: 20px; /* Espaçamento entre os livros */
+    text-align: center; /* Centraliza o texto */
+    max-width: 200px; /* Limita a largura das divs dos livros */
+}
+
+.obras {
+    margin: 10px 0; /* Espaçamento em cima e embaixo da imagem */
+    max-width: 100px; /* Limita a largura da imagem */
+}
+
+@media (max-width: 768px) {
+    .contensora {
+        flex-direction: column; /* Alinha os livros em coluna no mobile */
+        align-items: center; /* Centraliza os itens */
+    }
+}

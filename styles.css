@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "Metal Mania";
+    src: url(../site/fonts/MetalMania-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal
+  }
+ 
+body, html {
+    background: linear-gradient(180deg, #100311, #100315, #160426, #240332, #30053B, #360440);
+    color: #fff;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #f39c12 #1e1e2f;
+    overscroll-behavior: none;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    position: relative;
+    height: 70px;
+}
+
+.logo {
+    height: 50px;
+}
+
+h1 {
+    font-family: "Metal Mania";
+    font-size: 40px;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 3;
+    position: relative;
+}
+
+.bar {
+    background-color: white;
+    height: 3px;
+    width: 30px;
+    margin: 5px 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+body.menu-open::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    z-index: 1;
+    pointer-events: none;
+}
+
+#nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    width: 250px;
+    height: 100vh;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto;
+}
+
+#nav.show {
+    transform: translateX(0);
+}
+
+#menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#menu li {
+    margin: 3px 0; 
+}
+
+
+#menu li a {
+    display: block;
+    padding: 15px 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Metal Mania";
+    font-weight: normal;
+    z-index: 3;
+    transition: color 0.9s ease;
+}
+
+#menu li a:hover {
+    color: #f39c12;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    height: 1300px;
+}
+
+#contentFrame{
+    width: 100%;
+    border: none;
+    overflow-y: hidden;
+    height: 1300px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+
+footer p {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    text-align: center;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e1e2f;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #f39c12;
+    border-radius: 10px;
+    border: 3px solid #1e1e2f;
+}
+
+@media (min-width: 0px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 1100px) { 
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
